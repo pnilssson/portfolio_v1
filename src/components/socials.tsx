@@ -1,6 +1,7 @@
 import { groq } from "next-sanity";
-import { Social } from "../types/typings.d";
+import { Social } from "@/types/typings.d";
 import { client } from "@/sanity/client";
+import { SocialLink } from "@/components/social-link";
 
 const query = groq`*[_type == "social"]`;
 
@@ -9,23 +10,14 @@ export default async function Socials() {
 
   return (
     <>
-      <aside className="hidden lg:flex flex-col justify-center fixed right-6 top-0 h-full gap-6 social">
+      <aside className="social fixed right-6 top-0 hidden h-full flex-col justify-center gap-6 lg:flex">
         {socials.map((social) => (
-          <a href={social.url} key={social.name} target="_blank">
-            <span dangerouslySetInnerHTML={{ __html: social.svg }} />
-          </a>
+          <SocialLink social={social} key={social.name} />
         ))}
       </aside>
-      <footer className="flex lg:hidden flex-row justify-center items-center py-6 w-full gap-6 social">
+      <footer className="social flex w-full flex-row items-center justify-center gap-6 py-6 lg:hidden">
         {socials.map((social) => (
-          <a
-            href={social.url}
-            title={social.name}
-            aria-label={social.label}
-            key={social.name}
-            target="_blank">
-            <span dangerouslySetInnerHTML={{ __html: social.svg }} />
-          </a>
+          <SocialLink social={social} key={social.name} />
         ))}
       </footer>
     </>

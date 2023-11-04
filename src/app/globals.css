@@ -3,54 +3,54 @@
 @tailwind utilities;
 
 strong {
-    /* Violet 300 */
-    color:#c4b5fd;    
+  /* Violet 300 */
+  color: #c4b5fd;
 }
 
 .about::before {
-    content: "";
-    display: block;
-    width: 45px;
-    height: 1px;
-    background-color: #8b5cf6;
+  content: "";
+  display: block;
+  width: 45px;
+  height: 1px;
+  background-color: #8b5cf6;
 }
 
 .about::after {
-    content: "";
-    display: block;
-    width: 45px;
-    height: 1px;
-    margin-top: 16px;
-    margin-left: auto;
-    background-color: #8b5cf6;
+  content: "";
+  display: block;
+  width: 45px;
+  height: 1px;
+  margin-top: 16px;
+  margin-left: auto;
+  background-color: #8b5cf6;
 }
 
 .social::before {
-    content: "";
-    display: block;
-    width: 90px;
-    height: 1px;
-    background-color: #8b5cf6;
+  content: "";
+  display: block;
+  width: 90px;
+  height: 1px;
+  background-color: #8b5cf6;
 }
 
 .social::after {
-    content: "";
-    display: block;
-    width: 90px;
-    height: 1px;
-    background-color: #8b5cf6;
+  content: "";
+  display: block;
+  width: 90px;
+  height: 1px;
+  background-color: #8b5cf6;
 }
 
 @media only screen and (min-width: 1024px) {
-    .social::before {
-        width: 1px;
-        height: 90px;
-        margin: 0px auto;
-    }
-    
-    .social::after {
-        width: 1px;
-        height: 90px;
-        margin: 0px auto;
-    }
+  .social::before {
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+  }
+
+  .social::after {
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+  }
 }
