@@ -11,11 +11,11 @@ export default async function About() {
   return (
     <div id="about" className="lg:flex lg:flex-col lg:gap-6">
       <div className="pt-24 text-8xl font-extrabold text-violet-300 lg:py-24 lg:text-9xl">
-        <div className="">AB</div>
-        <div className="">OUT.</div>
+        <div className="">ABO</div>
+        <div className="">UT.</div>
       </div>
       <div className="lg:flex lg:flex-row">
-        <div className="pb-24 pt-24 lg:w-1/2 lg:py-24">
+        <div className="py-24 lg:w-1/2 lg:py-24">
           <div className="pb-6 font-mono text-violet-500">
             {about.nameTitle}
           </div>

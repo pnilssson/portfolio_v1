@@ -21,3 +21,12 @@ export interface Social extends SanityBase {
   label: string;
   svg: string;
 }
+
+export interface Experience extends SanityBase {
+  title: string;
+  subTitle: string;
+  timeframe: string;
+  svg: string;
+  description: TypedObject[];
+  competencies: string[];
+}
