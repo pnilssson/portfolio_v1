@@ -20,7 +20,7 @@ export default async function Certificates() {
         {certificates.map((certificate) => (
           <div key={certificate.title} className="basis-1/2">
             <Card>
-              <div className="relative flex flex-col items-center gap-6">
+              <div className="relative flex flex-col items-center gap-6 text-center">
                 <div className="relative h-24 w-24">
                   <Image
                     src={urlFor(certificate.image).url()}
@@ -40,7 +40,7 @@ export default async function Certificates() {
                 <div className="font-bold text-slate-100">
                   {certificate.title}
                 </div>
-                <div className="text-center">
+                <div>
                   <PortableText value={certificate.description} />
                 </div>
               </div>
