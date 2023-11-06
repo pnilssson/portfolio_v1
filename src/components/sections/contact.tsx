@@ -22,7 +22,7 @@ export default async function Contact() {
       <div className="flex flex-col justify-around gap-6 lg:basis-8/12 lg:flex-row lg:items-center">
         <div>
           <a
-            className="border-b border-violet-500 text-3xl font-extrabold uppercase text-slate-100 hover:text-violet-300"
+            className="border-b border-violet-500 text-3xl font-extrabold uppercase text-violet-300 hover:text-slate-100"
             aria-label="Email me"
             href="mailto:p.nilsson95@hotmail.com"
           >
@@ -35,7 +35,7 @@ export default async function Contact() {
               href={`${downloadable.file.url}?dl=${downloadable.name}.pdf`}
               download
               aria-label={downloadable.label}
-              className="border-b border-violet-500 text-3xl font-extrabold uppercase text-slate-100 hover:text-violet-300"
+              className="border-b border-violet-500 text-3xl font-extrabold uppercase text-violet-300 hover:text-slate-100"
             >
               {downloadable.title}
             </a>

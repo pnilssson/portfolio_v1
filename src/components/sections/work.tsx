@@ -17,7 +17,7 @@ export default async function Work() {
             <div className="">ORK.</div>
           </div>
         </div>
-        <div className="flex flex-col gap-12 self-center pt-12 lg:w-8/12 lg:pt-0">
+        <div className="flex flex-col gap-12 self-center pt-12 lg:basis-8/12 lg:pt-0">
           {experiences.map((experience, i) => (
             <div key={i} className="lg:flex lg:flex-row lg:gap-6">
               <div className="pb-3 font-mono font-semibold text-violet-300 lg:basis-2/12">
