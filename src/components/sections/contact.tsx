@@ -16,7 +16,7 @@ export default async function Contact() {
   return (
     <div
       id="contact"
-      className="items-center justify-between pb-12 lg:flex lg:flex-row lg:pb-48 lg:pt-24"
+      className="items-center gap-6 pb-12 lg:flex lg:flex-row lg:pb-48 lg:pt-24"
     >
       <div className="text-7xl font-extrabold text-violet-300 lg:basis-4/12 lg:text-8xl">
         <div className="">CONT</div>
