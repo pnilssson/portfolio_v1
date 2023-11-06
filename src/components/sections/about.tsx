@@ -22,7 +22,7 @@ export default async function About() {
           <div className="pb-6 text-4xl font-bold text-slate-100 lg:text-5xl">
             {about.name}
           </div>
-          <div className="max-w-xs text-xl">
+          <div className="max-w-xs">
             <PortableText value={about.shortBio} />
           </div>
         </div>

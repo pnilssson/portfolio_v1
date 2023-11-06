@@ -14,34 +14,35 @@ export default async function Contact() {
   const downloadables = await client.fetch<Downloadable[]>(query);
 
   return (
-    <div id="contact" className="pb-12 lg:flex lg:flex-col lg:py-24">
-      <div className="pb-12 text-7xl font-extrabold text-violet-300 lg:basis-4/12 lg:pb-24 lg:text-8xl">
+    <div
+      id="contact"
+      className="items-center justify-between pb-12 lg:flex lg:flex-row lg:pb-48 lg:pt-24"
+    >
+      <div className="text-7xl font-extrabold text-violet-300 lg:basis-4/12 lg:text-8xl">
         <div className="">CONT</div>
         <div className="">ACT.</div>
       </div>
-      <div className="flex flex-col justify-around gap-6 lg:basis-8/12 lg:flex-row lg:items-center">
-        <div>
+      <div className="pt-12 lg:pt-0">
+        <a
+          className="btn-contact "
+          aria-label="Email me"
+          href="mailto:p.nilsson95@hotmail.com"
+        >
+          Email me.
+        </a>
+      </div>
+      {downloadables.map((downloadable) => (
+        <div key={downloadable.title} className="btn-shadow pt-12 lg:pt-0">
           <a
-            className="border-b border-violet-500 text-3xl font-extrabold uppercase text-violet-300 hover:text-slate-100"
-            aria-label="Email me"
-            href="mailto:p.nilsson95@hotmail.com"
+            href={`${downloadable.file.url}?dl=${downloadable.name}.pdf`}
+            download
+            aria-label={downloadable.label}
+            className="btn-contact"
           >
-            Email me.
+            {downloadable.title}
           </a>
         </div>
-        {downloadables.map((downloadable) => (
-          <div key={downloadable.title}>
-            <a
-              href={`${downloadable.file.url}?dl=${downloadable.name}.pdf`}
-              download
-              aria-label={downloadable.label}
-              className="border-b border-violet-500 text-3xl font-extrabold uppercase text-violet-300 hover:text-slate-100"
-            >
-              {downloadable.title}
-            </a>
-          </div>
-        ))}
-      </div>
+      ))}
     </div>
   );
 }

@@ -40,7 +40,7 @@ export default async function Certificates() {
                 <div className="font-bold text-slate-100">
                   {certificate.title}
                 </div>
-                <div>
+                <div className="text-sm">
                   <PortableText value={certificate.description} />
                 </div>
               </div>

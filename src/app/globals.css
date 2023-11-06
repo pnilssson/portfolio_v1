@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TALWIND APPLY */
+@layer components {
+  .btn-contact {
+    @apply flex rounded-md border-2 border-violet-500 px-4 py-2 text-3xl font-extrabold uppercase text-violet-300;
+  }
+
+  .btn-contact:hover {
+    box-shadow: -5px 5px 0px 0px rgba(139,92,246,1);
+    -webkit-box-shadow: -5px 5px 0px 0px rgba(139,92,246,1);
+    -moz-box-shadow: -5px 5px 0px rgba(139,92,246,1);
+    transform: translate(2px, -2px);
+  }
+}
+
 strong {
   /* Violet 300 */
   color: #c4b5fd;
