@@ -19,17 +19,15 @@ export default async function Work() {
         </div>
         <div className="self-center pb-24 lg:w-8/12 lg:py-24">
           {experiences.map((experience, i) => (
-            <div key={i} className="mt-12 lg:flex lg:flex-row">
-              <div className="pb-3 font-mono font-semibold text-violet-300 lg:w-4/12">
+            <div key={i} className="mt-12 lg:flex lg:flex-row lg:gap-6">
+              <div className="pb-3 font-mono font-semibold text-violet-300 lg:w-2/12">
                 {experience.timeframe}
               </div>
-              <div className="lg:w-8/12">
+              <div className="lg:w-10/12">
                 <div className="text-xl font-bold text-slate-100">
                   {experience.title}
                 </div>
-                {experience.subTitle && (
-                  <div className="">{experience.subTitle}</div>
-                )}
+                <div className="">{experience.subTitle}</div>
                 <div className="py-3 text-sm">
                   <PortableText value={experience.description} />
                 </div>

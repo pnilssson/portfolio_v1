@@ -25,6 +25,10 @@ strong {
   background-color: #8b5cf6;
 }
 
+.social img:hover {
+  scale: 1.2;
+}
+
 .social::before {
   content: "";
   display: block;
