@@ -11,7 +11,7 @@ export default async function Home() {
         <About />
         <Work />
         <Certificates />
-        {/* <Contact /> */}
+        <Contact />
       </main>
       <Socials />
     </>

@@ -6,7 +6,6 @@ export function SocialLink({ social }: { social: Social }) {
   return (
     <a
       href={social.url}
-      title={social.name}
       aria-label={social.label}
       target="_blank"
       className="icon relative h-6 w-6"

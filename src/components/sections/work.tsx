@@ -11,7 +11,7 @@ export default async function Work() {
   return (
     <div id="work" className="lg:flex lg:flex-col lg:gap-6">
       <div className="pb-24 lg:flex lg:flex-row lg:py-24">
-        <div className="lg:basis-4/12 ">
+        <div className="lg:basis-4/12">
           <div className="text-7xl font-extrabold text-violet-300 lg:text-8xl">
             <div className="">W</div>
             <div className="">ORK.</div>

@@ -47,3 +47,13 @@ export interface Certificate extends SanityBase {
   label: string;
   image: Image;
 }
+
+export interface Downloadable extends SanityBase {
+  title: string;
+  label: string;
+  name: string;
+  file: {
+    asset: SanityAsset;
+    url: string;
+  };
+}

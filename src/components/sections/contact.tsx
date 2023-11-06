@@ -1,19 +1,47 @@
-import { groq } from "next-sanity";
-import { About } from "@/types/typings.d";
 import { client } from "@/sanity/client";
+import { Downloadable } from "@/types/typings";
+import { groq } from "next-sanity";
 
-const query = groq`*[_type == "about"][0]`;
+const query = groq`*[_type == "download"]  | order(_createdAt desc) {
+    ...,
+    file {
+      ...,
+      "url": asset->url
+    }
+  }`;
 
 export default async function Contact() {
-  const about = await client.fetch<About>(query);
+  const downloadables = await client.fetch<Downloadable[]>(query);
 
   return (
-    <div id="contact" className="pb-24 lg:flex lg:flex-col lg:gap-6">
-      <div className="pb-12 text-7xl font-extrabold text-violet-300 lg:py-24 lg:text-8xl">
+    <div id="contact" className="pb-12 lg:flex lg:flex-col lg:py-24">
+      <div className="pb-12 text-7xl font-extrabold text-violet-300 lg:basis-4/12 lg:pb-24 lg:text-8xl">
         <div className="">CONT</div>
         <div className="">ACT.</div>
       </div>
-      <div className="flex flex-col gap-6 lg:flex-row"></div>
+      <div className="flex flex-col justify-around gap-6 lg:basis-8/12 lg:flex-row lg:items-center">
+        <div>
+          <a
+            className="border-b border-violet-500 text-3xl font-extrabold uppercase text-slate-100 hover:text-violet-300"
+            aria-label="Email me"
+            href="mailto:p.nilsson95@hotmail.com"
+          >
+            Email me.
+          </a>
+        </div>
+        {downloadables.map((downloadable) => (
+          <div key={downloadable.title}>
+            <a
+              href={`${downloadable.file.url}?dl=${downloadable.name}.pdf`}
+              download
+              aria-label={downloadable.label}
+              className="border-b border-violet-500 text-3xl font-extrabold uppercase text-slate-100 hover:text-violet-300"
+            >
+              {downloadable.title}
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
