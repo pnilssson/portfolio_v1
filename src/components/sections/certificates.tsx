@@ -11,7 +11,7 @@ const query = groq`*[_type == "certificate"]`;
 export default async function Certificates() {
   const certificates = await client.fetch<Certificate[]>(query);
   return (
-    <div id="about" className="pb-24 lg:flex lg:flex-col lg:gap-6">
+    <div id="certificate" className="pb-24 lg:flex lg:flex-col">
       <div className="pb-12 text-7xl font-extrabold text-violet-300 lg:py-24 lg:text-8xl">
         <div className="">CERTI</div>
         <div className="">FICATES.</div>

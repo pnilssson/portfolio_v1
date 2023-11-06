@@ -8,7 +8,7 @@ export default async function Contact() {
   const about = await client.fetch<About>(query);
 
   return (
-    <div id="about" className="pb-24 lg:flex lg:flex-col lg:gap-6">
+    <div id="contact" className="pb-24 lg:flex lg:flex-col lg:gap-6">
       <div className="pb-12 text-7xl font-extrabold text-violet-300 lg:py-24 lg:text-8xl">
         <div className="">CONT</div>
         <div className="">ACT.</div>

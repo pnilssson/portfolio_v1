@@ -9,17 +9,17 @@ export default async function Work() {
   const experiences = await client.fetch<Experience[]>(query);
 
   return (
-    <div id="about" className="lg:flex lg:flex-col lg:gap-6">
-      <div className="lg:flex lg:flex-row">
-        <div className="lg:basis-4/12 lg:py-24">
-          <div className="text-7xl font-extrabold text-violet-300 lg:py-24 lg:text-8xl">
+    <div id="work" className="lg:flex lg:flex-col lg:gap-6">
+      <div className="pb-24 lg:flex lg:flex-row lg:py-24">
+        <div className="lg:basis-4/12 ">
+          <div className="text-7xl font-extrabold text-violet-300 lg:text-8xl">
             <div className="">W</div>
             <div className="">ORK.</div>
           </div>
         </div>
-        <div className="self-center pb-24 lg:w-8/12 lg:py-24">
+        <div className="flex flex-col gap-12 self-center pt-12 lg:w-8/12 lg:pt-0">
           {experiences.map((experience, i) => (
-            <div key={i} className="mt-12 lg:flex lg:flex-row lg:gap-6">
+            <div key={i} className="lg:flex lg:flex-row lg:gap-6">
               <div className="pb-3 font-mono font-semibold text-violet-300 lg:basis-2/12">
                 {experience.timeframe}
               </div>
