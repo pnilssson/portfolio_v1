@@ -11,7 +11,7 @@ export default async function Work() {
   return (
     <div id="about" className="lg:flex lg:flex-col lg:gap-6">
       <div className="lg:flex lg:flex-row">
-        <div className="lg:w-4/12 lg:py-24">
+        <div className="lg:basis-4/12 lg:py-24">
           <div className="text-7xl font-extrabold text-violet-300 lg:py-24 lg:text-8xl">
             <div className="">W</div>
             <div className="">ORK.</div>
@@ -20,10 +20,10 @@ export default async function Work() {
         <div className="self-center pb-24 lg:w-8/12 lg:py-24">
           {experiences.map((experience, i) => (
             <div key={i} className="mt-12 lg:flex lg:flex-row lg:gap-6">
-              <div className="pb-3 font-mono font-semibold text-violet-300 lg:w-2/12">
+              <div className="pb-3 font-mono font-semibold text-violet-300 lg:basis-2/12">
                 {experience.timeframe}
               </div>
-              <div className="lg:w-10/12">
+              <div className="lg:basis-10/12">
                 <div className="text-xl font-bold text-slate-100">
                   {experience.title}
                 </div>
@@ -35,7 +35,7 @@ export default async function Work() {
                   {experience.competencies?.map((competence, j) => (
                     <li
                       key={j}
-                      className="me-3 mt-2 rounded-full bg-violet-500/10 px-3 py-1 text-xs font-semibold text-violet-400"
+                      className="me-3 mt-2 rounded-full bg-violet-500/10 px-3 py-1 text-xs font-semibold text-violet-300"
                     >
                       {competence}
                     </li>

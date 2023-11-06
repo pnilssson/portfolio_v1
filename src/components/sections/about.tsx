@@ -15,7 +15,7 @@ export default async function About() {
         <div className="">UT.</div>
       </div>
       <div className="lg:flex lg:flex-row">
-        <div className="py-24 lg:w-1/2 lg:py-24">
+        <div className="py-24 lg:basis-1/2">
           <div className="pb-6 font-mono text-violet-500">
             {about.nameTitle}
           </div>
@@ -26,7 +26,7 @@ export default async function About() {
             <PortableText value={about.shortBio} />
           </div>
         </div>
-        <div className="about self-center pb-24 lg:w-1/2 lg:py-24">
+        <div className="about self-center pb-24 lg:basis-1/2 lg:py-24">
           {about.fullBio?.map((bio, i) => (
             <div className="pt-4 text-sm" key={i}>
               <PortableText value={bio} />

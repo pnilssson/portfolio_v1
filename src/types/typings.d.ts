@@ -7,6 +7,16 @@ type SanityBase = {
   _updatedAt: string;
 };
 
+type SanityAsset = {
+  _ref: string;
+  _type: string;
+}
+
+type Image = {
+  alt: string;
+  asset: SanityAsset;
+}
+
 export interface About extends SanityBase {
   nameTitle: string;
   name: string;
@@ -19,15 +29,7 @@ export interface Social extends SanityBase {
   name: string;
   url: string;
   label: string;
-  svg: SocialSVG;
-}
-
-export interface SocialSVG {
-  alt: string;
-  asset: {
-    _ref: string;
-    _type: string;
-  }
+  image: Image;
 }
 
 export interface Experience extends SanityBase {
@@ -36,4 +38,12 @@ export interface Experience extends SanityBase {
   timeframe: string;
   description: TypedObject[];
   competencies: string[];
+}
+
+export interface Certificate extends SanityBase {
+  title: string;
+  description: TypedObject[];
+  url: string;
+  label: string;
+  image: Image;
 }

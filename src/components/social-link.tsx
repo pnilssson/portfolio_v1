@@ -9,9 +9,9 @@ export function SocialLink({ social }: { social: Social }) {
       title={social.name}
       aria-label={social.label}
       target="_blank"
-      className="relative h-6 w-6"
+      className="icon relative h-6 w-6"
     >
-      <Image src={urlFor(social.svg).url()} alt={social.svg.alt} fill />
+      <Image src={urlFor(social.image).url()} alt={social.image.alt} fill />
     </a>
   );
 }
