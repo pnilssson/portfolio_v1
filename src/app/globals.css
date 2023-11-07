@@ -5,14 +5,7 @@
 /* TALWIND APPLY */
 @layer components {
   .btn-contact {
-    @apply border-b-2 pb-2 border-violet-300 text-3xl font-extrabold uppercase text-violet-300 lg:flex lg:rounded-md lg:border-0 lg:bg-slate-500/10 lg:px-4 lg:py-2
-  }
-
-  .btn-contact:hover {
-    box-shadow: -5px 5px 0px 0px rgba(139,92,246,1);
-    -webkit-box-shadow: -5px 5px 0px 0px rgba(139,92,246,1);
-    -moz-box-shadow: -5px 5px 0px rgba(139,92,246,1);
-    transform: translate(2px, -2px);
+    @apply flex border-violet-500 text-xl font-extrabold uppercase text-violet-300 lg:flex lg:rounded-md lg:border-2 lg:px-6 lg:py-3
   }
 }
 
@@ -73,5 +66,12 @@ strong {
     width: 1px;
     height: 90px;
     margin: 0px auto;
+  }
+  
+  .btn-contact:hover {
+    box-shadow: -5px 5px 0px 0px rgba(139,92,246,1);
+    -webkit-box-shadow: -5px 5px 0px 0px rgba(139,92,246,1);
+    -moz-box-shadow: -5px 5px 0px rgba(139,92,246,1);
+    transform: translate(2px, -2px);
   }
 }
