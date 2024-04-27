@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,11 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <Script
+        id="cookieyes"
+        src="https://cdn-cookieyes.com/client_data/3cbf2301cd4ae3275ee53f9e/script.js"
+        strategy="lazyOnload"
+      />
     </html>
   );
 }
